@@ -20,8 +20,9 @@ module.exports = {
       errors.message = 'Is required';
     } else if (typeof data.message !== 'string') {
       errors.message = 'Should be a string';
-    } else if (data.message.length > 300) {
-      errors.message = 'Should be less than 301 characters';
+    } else if (data.message.length > 999) {
+      //changed from 300 to 999
+      errors.message = 'Should be less than 1000 characters'; //changed from 301 to 1000
     }
 
     if (typeof data.name === 'undefined' || data.name === '') {
